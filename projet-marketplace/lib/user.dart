@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'package:http/http.dart' as http;
+import 'package:dotenv/dotenv.dart' show load, env;
 
 class User {
-  String baseUrl = "http://10.31.34.145:8000/api/auth/user";
+  String baseUrl = "${env['BASE_URL']}/admin/user";
 
   Future<List> getAllUsers() async{
     try {
