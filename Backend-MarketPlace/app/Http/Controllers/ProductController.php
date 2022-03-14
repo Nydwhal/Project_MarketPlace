@@ -28,6 +28,6 @@ class ProductController extends Controller
     public function deleteProduct(Request $request)
     {
         $id = $request->id;
-        return Product::find($id)->delete()
+        return Product::find($id)->delete();
     }
 }
