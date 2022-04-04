@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'user.dart';
+import 'product.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,6 +30,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
 User userService = User();
+Product productService = Product();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,6 +40,7 @@ User userService = User();
       body: Container(
         child: FutureBuilder<List>(
           future: userService.getAllUsers(),
+          // future: productService.getAllProducts(),
           builder: (context, snapchot){
             print(snapchot.data);
             if (snapchot.hasData) {
@@ -49,6 +52,13 @@ User userService = User();
                     subtitle: Text(snapchot.data![i]["email"], style: TextStyle(fontSize: 30.0))
                   )
                 );
+                // return Card(
+                //   child: ListTile(
+                //     title: Text(snapchot.data![i]["label"] + " " + snapchot.data![i]["price"].toString(),
+                //     style: TextStyle(fontSize: 30.0)),
+                //     subtitle: Text(snapchot.data![i]["description"], style: TextStyle(fontSize: 30.0))
+                //   )
+                // );
               });
             }else{
               return const Center(

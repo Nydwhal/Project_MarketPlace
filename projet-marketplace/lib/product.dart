@@ -10,12 +10,12 @@ import 'package:http/http.dart' as http;
 //   //...runapp
 // }
 
-class User {
-  String baseUrl = "http://10.31.34.145:8000/api/admin/user";
-  // String baseUrl = "${dotenv.env['BASE_URL']}/admin/user";
+class Product {
+  String baseUrl = "http://10.31.34.145:8000/api/product/products";
+  // String baseUrl = "${dotenv.env['BASE_URL']}/api/product/products";
 
 
-  Future<List> getAllUsers() async{
+  Future<List> getAllProducts() async{
     try {
       var url = Uri.parse(baseUrl);
       var response = await http.get(url);
@@ -29,13 +29,14 @@ class User {
     }
   }
 
-  Future<http.Response> postUser(name, email, password) async{
+  Future<http.Response> postProduct(label, description, price, state) async{
     try {
       var url = Uri.parse(baseUrl);
       return await http.post(url, body: jsonEncode(<String, String>{
-        "name": name,
-        "email": email,
-        "password": password
+        "label": label,
+        "description": description,
+        "price": price,
+        "state": state
       }));
     } catch (e) {
       return Future.error(e);

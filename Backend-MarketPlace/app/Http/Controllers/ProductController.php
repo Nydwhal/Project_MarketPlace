@@ -16,13 +16,15 @@ class ProductController extends Controller
         $label = $request->label;
         $description = $request->description;
         $price = $request->price;
-        return Product::create(['label' => $label, 'description' => $description, 'price' => $price]);
+        $state = $request->state;
+        return Product::create(['label' => $label, 'description' => $description, 'price' => $price, 'state' => $state]);
     }
 
     public function editProduct(Request $request){
         $label = $request->label;
         $description = $request->description;
         $price = $request->price;
+        $state= $request->state;
     }
 
     public function deleteProduct(Request $request)

@@ -12,6 +12,10 @@ class Product extends Model
     protected $fillable = [
         'label',
         'description',
-        'price'
+        'initial_price',
+        "final_price",
+        "start_date",
+        "end_date",
+        'state'
     ];
 }

@@ -17,7 +17,11 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string("label");
             $table->string("description");
-            $table->integer("price");
+            $table->float("initial_price");
+            $table->float("final_price");
+            $table->date("start_date");
+            $table->date("end_date");
+            $table->string("state");
             $table->timestamps();
         });
     }

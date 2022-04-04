@@ -33,3 +33,7 @@ Route::group([
     Route::get('user', [UserController::class, 'index']);
     Route::post('delete', [UserController::class, 'delete']);
 });
+
+//Changer current_price
+//Changer amount
+//changer product_state (en vente/vendu)
