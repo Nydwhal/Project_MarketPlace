@@ -3,7 +3,7 @@
         {
             "name": "Flutter",
             "program": "lib/main.dart",
-            "cwd": "projet-marketplace",
+            "cwd": "Front-Marketplace",
             "request": "launch",
             "type": "dart"
         }
