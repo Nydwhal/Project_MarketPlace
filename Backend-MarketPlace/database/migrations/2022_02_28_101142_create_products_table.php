@@ -18,7 +18,7 @@ class CreateProductsTable extends Migration
             $table->string("label");
             $table->string("description");
             $table->float("initial_price");
-            $table->float("final_price");
+            $table->float("current_price");
             $table->date("start_date");
             $table->date("end_date");
             $table->string("state");

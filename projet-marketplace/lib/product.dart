@@ -15,6 +15,7 @@ class Product {
   // String baseUrl = "${dotenv.env['BASE_URL']}/api/product/products";
 
 
+  ///Get all products
   Future<List> getAllProducts() async{
     try {
       var url = Uri.parse(baseUrl);
@@ -29,13 +30,17 @@ class Product {
     }
   }
 
-  Future<http.Response> postProduct(label, description, price, state) async{
+  ////Create new products
+  Future<http.Response> postProduct(label, description, price, initial_price, current_price, start_date, end_date, state) async{
     try {
       var url = Uri.parse(baseUrl);
       return await http.post(url, body: jsonEncode(<String, String>{
         "label": label,
         "description": description,
-        "price": price,
+        "initial_price": initial_price,
+        "current_price": current_price,
+        "start_date": start_date,
+        "end_date": end_date,
         "state": state
       }));
     } catch (e) {

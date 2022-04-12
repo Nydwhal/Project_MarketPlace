@@ -13,9 +13,14 @@ class Product extends Model
         'label',
         'description',
         'initial_price',
-        "final_price",
+        "current_price",
         "start_date",
         "end_date",
         'state'
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

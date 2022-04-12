@@ -24,6 +24,9 @@ Route::group([
 ], function ($router) {
     Route::get('/products', [ProductController::class, 'index']);
     Route::post('/add', [ProductController::class, 'addProduct']);
+    Route::post('/edit', [ProductController::class, 'editProduct']);
+    Route::post('/bid', [ProductController::class, 'bidProduct']);
+    Route::post('/delete', [ProductController::class, 'deleteProduct']);
 });
 
 Route::group([
@@ -34,6 +37,6 @@ Route::group([
     Route::post('delete', [UserController::class, 'delete']);
 });
 
-//Changer current_price
+//Changer mettre
 //Changer amount
 //changer product_state (en vente/vendu)

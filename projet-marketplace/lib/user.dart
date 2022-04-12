@@ -15,6 +15,7 @@ class User {
   // String baseUrl = "${dotenv.env['BASE_URL']}/admin/user";
 
 
+  ///Get all users
   Future<List> getAllUsers() async{
     try {
       var url = Uri.parse(baseUrl);
@@ -29,6 +30,7 @@ class User {
     }
   }
 
+  ///Create new user
   Future<http.Response> postUser(name, email, password) async{
     try {
       var url = Uri.parse(baseUrl);

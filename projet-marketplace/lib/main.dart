@@ -54,7 +54,7 @@ Product productService = Product();
                 );
                 // return Card(
                 //   child: ListTile(
-                //     title: Text(snapchot.data![i]["label"] + " " + snapchot.data![i]["price"].toString(),
+                //     title: Text(snapchot.data![i]["label"] + " " + snapchot.data![i]["initial_price"].toString(),
                 //     style: TextStyle(fontSize: 30.0)),
                 //     subtitle: Text(snapchot.data![i]["description"], style: TextStyle(fontSize: 30.0))
                 //   )
